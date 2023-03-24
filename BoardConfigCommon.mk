@@ -91,5 +91,8 @@ TARGET_BOARD_PLATFORM := holi
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Vendor Security patch level
+VENDOR_SECURITY_PATCH := 2024-05-05
+
 # Inherit the proprietary files
 include vendor/oneplus/sm6375-common/BoardConfigVendor.mk
