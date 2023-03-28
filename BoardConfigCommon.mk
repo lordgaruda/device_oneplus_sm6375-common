@@ -107,6 +107,9 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2024-05-05
 
