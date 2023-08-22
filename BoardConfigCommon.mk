@@ -167,7 +167,7 @@ include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2024-05-05
-
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
