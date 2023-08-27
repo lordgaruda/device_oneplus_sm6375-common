@@ -337,8 +337,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.default \
+    init.oplus.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
+    init.target.rc \
     ueventd.qcom.rc
 
 # RCS
