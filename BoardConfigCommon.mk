@@ -175,6 +175,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2024-05-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
