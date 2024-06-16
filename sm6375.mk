@@ -176,6 +176,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_ODM)/etc/gps.conf
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
