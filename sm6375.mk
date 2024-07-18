@@ -321,9 +321,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -394,7 +393,9 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oplus
+    hardware/oplus \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
