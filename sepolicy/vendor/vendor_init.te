@@ -1,0 +1,2 @@
+# Power
+allow vendor_init proc_sysctl_schedboost:file w_file_perms;
