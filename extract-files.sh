@@ -76,6 +76,9 @@ function blob_fixup() {
         vendor/etc/media_*/video_system_specs.json)
             sed -i -E "/max_retry_alloc_output_timeout/ s/([0-9]+)/0/" "${2}"
             ;;
+        vendor/etc/media_codecs.xml|vendor/etc/media_codecs_blair.xml|vendor/etc/media_codecs_holi.xml)
+            sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+            ;;
         odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;

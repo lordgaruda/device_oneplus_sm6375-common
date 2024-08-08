@@ -640,7 +640,6 @@ vendor/etc/media_codecs_holi.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_performance_blair.xml
 vendor/etc/media_codecs_performance_holi.xml
-vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_blair.xml
