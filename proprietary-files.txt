@@ -1048,7 +1048,6 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.ssc.so|ab98d4464eba75d9329fa2734afae5aa0f542a83|9ad9cf974b3f3a00e1a830e338035874a58e94e2
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
