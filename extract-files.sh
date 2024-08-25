@@ -77,7 +77,12 @@ function blob_fixup() {
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
         odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so)
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        system_ext/lib/libwfdservice.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
             ;;
         vendor/etc/media_*/video_system_specs.json)
             [ "$2" = "" ] && return 0
