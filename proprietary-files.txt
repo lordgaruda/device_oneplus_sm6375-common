@@ -1,4 +1,4 @@
-# Proprietary files - from CPH2467_14.0.0.700(EX01) build, unless pinned
+# Proprietary files - from CPH2467_14.0.0.901(EX01) build, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
