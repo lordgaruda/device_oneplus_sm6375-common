@@ -657,6 +657,14 @@ vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
 
+# NFC - from CPH2465_14.0.0.901(EX01)
+odm/etc/nfc/libnfc-nci.conf_22872:vendor/etc/libnfc-nci.conf|b6a6d0d886fb43f108c3e08b7524aefb7d91edbc
+odm/etc/nfc/libnfc-nxp.conf_22872:vendor/etc/libnfc-nxp.conf|cfd7d1c5d4f4067e2939044e51d9a7751bf0afd2
+odm/etc/nfc/libnfc-nxp_RF.conf_22872:vendor/libnfc-nxp_RF.conf|ec64a0478bec5024aa9eeab6bf15b2c6a6c66369
+odm/etc/nfc/nfc_conf_ref|60498e1327a2246f7a4606589184cd0ce81fbdae
+odm/etc/nfc/nfc_fw_ref|332ad86904ef6f62a9a39fc29d1b60720460bb5d
+odm/lib/libpn557_fw.so:vendor/lib/libpn557_fw.so|5fd4d17960d258563557d47d70c4d9d11a79fd15
+
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
