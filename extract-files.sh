@@ -91,11 +91,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
-        vendor/lib64/sensors.ssc.so)
-            [ "$2" = "" ] && return 0
-            sed -i "s/qti.sensor.wise_light/android.sensor.light\x00/" "${2}"
-            "${SIGSCAN}" -p "EA D3 84 52 01 41 00 91 29 00 15 CB 29 41 00 D1 29 15 C9 93 4A 3F A0 72" -P "AA 00 80 52 01 41 00 91 29 00 15 CB 29 41 00 D1 29 15 C9 93 0A 00 A0 72" -f "${2}"
-            ;;
         *)
             return 1
             ;;
