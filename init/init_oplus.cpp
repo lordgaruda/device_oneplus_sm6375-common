@@ -35,6 +35,7 @@ void OverrideProperty(const char* name, const char* value) {
 void vendor_load_properties() {
     auto hw_region_id = std::stoi(GetProperty("ro.boot.hw_region_id", "0"));
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
+    auto sku = std::stoi(GetProperty("ro.boot.product.hardware.sku", "0"));
 
     switch (hw_region_id) {
         // larry
@@ -58,5 +59,17 @@ void vendor_load_properties() {
             break;
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
+    }
+
+    switch (sku) {
+        // oscaro
+        case 2: // IN
+            OverrideProperty("ro.product.product.model", "CPH2381");
+            break;
+        case 6: // GL
+            OverrideProperty("ro.product.product.model", "CPH2409");
+            break;
+        default:
+            LOG(ERROR) << "Unexpected SKU: " << sku;
     }
 }
