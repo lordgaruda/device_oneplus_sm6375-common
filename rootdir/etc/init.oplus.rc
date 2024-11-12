@@ -170,3 +170,8 @@ service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     group system
     class late_start
     oneshot
+
+on property:ro.boot.prjname=20825
+    setprop persist.radio.multisim.config "ssss"
+on property:ro.boot.prjname=20826
+    setprop persist.radio.multisim.config "ssss"
