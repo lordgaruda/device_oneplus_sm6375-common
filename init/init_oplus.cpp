@@ -36,40 +36,47 @@ void vendor_load_properties() {
     auto hw_region_id = std::stoi(GetProperty("ro.boot.hw_region_id", "0"));
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
     auto sku = std::stoi(GetProperty("ro.boot.product.hardware.sku", "0"));
+    std::string device = GetProperty("ro.product.device", "");
 
-    switch (hw_region_id) {
-        // larry
-        case 2: // IN
-            OverrideProperty("ro.product.product.model", "CPH2467");
-            break;
-        case 3: // EU
-            OverrideProperty("ro.product.product.model", "CPH2465");
-            break;
-        case 4: // NA
-            OverrideProperty("ro.product.product.model", "CPH2513");
-            break;
-        default:
-            LOG(ERROR) << "Unexpected region ID: " << hw_region_id;
+    if (device == "OP5958L1") {
+        switch (hw_region_id) {
+            // larry
+            case 2: // IN
+                OverrideProperty("ro.product.product.model", "CPH2467");
+                break;
+            case 3: // EU
+                OverrideProperty("ro.product.product.model", "CPH2465");
+                break;
+            case 4: // NA
+                OverrideProperty("ro.product.product.model", "CPH2513");
+                break;
+            default:
+                LOG(ERROR) << "Unexpected region ID: " << hw_region_id;
+        }
     }
 
-    switch (prjname) {
-        // gunnar
-        case 20826: // T-Mobile (20826)
-            OverrideProperty("ro.product.product.model", "GN2200");
-            break;
-        default:
-            LOG(ERROR) << "Unexpected project name: " << prjname;
+    if (device == "OP5159L1") {
+        switch (prjname) {
+            // gunnar
+            case 20826: // T-Mobile (20826)
+                OverrideProperty("ro.product.product.model", "GN2200");
+                break;
+            default:
+                LOG(ERROR) << "Unexpected project name: " << prjname;
+        }
     }
 
-    switch (sku) {
-        // oscaro
-        case 2: // IN
-            OverrideProperty("ro.product.product.model", "CPH2381");
-            break;
-        case 6: // GL
-            OverrideProperty("ro.product.product.model", "CPH2409");
-            break;
-        default:
-            LOG(ERROR) << "Unexpected SKU: " << sku;
+    if (device == "OP535DL1") {
+        switch (sku) {
+            // oscaro
+            case 2: // IN
+                OverrideProperty("ro.product.product.model", "CPH2381");
+                break;
+            case 6: // GL
+                OverrideProperty("ro.product.product.model", "CPH2409");
+                break;
+            default:
+                LOG(ERROR) << "Unexpected SKU: " << sku;
+        }
     }
 }
