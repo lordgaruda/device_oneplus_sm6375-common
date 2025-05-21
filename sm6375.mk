@@ -315,12 +315,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
-# RCS
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
